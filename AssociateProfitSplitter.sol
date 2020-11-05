@@ -17,7 +17,7 @@ contract AssociateProfitSplitter {
     }
     
     function deposit() public payable {
-        require(msg.sender == address(this), "You don't own this account!");
+        require(msg.sender != address(this), "You don't own this account!");
         
         uint amount = msg.value / 3; 
         
